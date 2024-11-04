@@ -5,8 +5,14 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    {{ content }}
+  <body class="container mx-auto jetbrains-mono leading-loose dark:bg-white repeat-pattern font-semibold">
+    {% include header.html %}
+    <div class="max-w-5xl mx-auto">
+      {{ content }}
+    </div>
   </body>
 </html>

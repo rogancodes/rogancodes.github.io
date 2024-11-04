@@ -1,0 +1,20 @@
+- title: Styling options for links
+  pr: https://github.com/puzzle/prawn-markup/pull/53
+  repo: prawn-markup
+  status:  merged
+  date: 2024-10-03
+- title: Ignore, if given path is directory while referencing and renaming
+  pr: https://github.com/Shopify/ruby-lsp/pull/2716
+  repo: ruby-lsp
+  status:  merged
+  date: 2024-10-12
+- title: Code actions for attribute accessor creation
+  pr: https://github.com/Shopify/ruby-lsp/pull/2739
+  repo: ruby-lsp
+  status:  open
+  date: 2024-10-20
+- title: Highlight definition and control block structures
+  pr: https://github.com/Shopify/ruby-lsp/pull/2779
+  repo: ruby-lsp
+  status: open
+  date: 2024-10-25

@@ -1,0 +1,19 @@
+<header class="text-xl italic font-bold text-slate-600">
+	<div class="max-w-5xl mx-auto h-16 flex justify-between md:space-x-8">
+    <a rel="noopener noreferrer" href="/" class="flex items-center px-4 text-3xl"> rogancodes</a>
+		<ul class="items-stretch hidden space-x-3 md:flex">
+      {% for item in site.data.navigation %}
+        <li class="flex">
+            <a rel="noopener noreferrer" href="{{ item.link }}" class="flex items-center px-3 {% if page.url == item.link %} dark:text-violet-600 underline decoration-solid {% endif %}">
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+		</ul>
+		<button title="Button" type="button" class="p-4 md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-800">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</button>
+	</div>
+</header>
