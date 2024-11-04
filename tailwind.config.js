@@ -5,10 +5,12 @@ module.exports = {
     "./_includes/**/*.html",
     "./_layouts/**/*.html",
     "./*.md",
-    "./*.html"
+    "./**/.html"
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
