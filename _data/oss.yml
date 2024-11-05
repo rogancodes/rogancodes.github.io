@@ -16,5 +16,5 @@
 - title: Highlight definition and control block structures
   pr: https://github.com/Shopify/ruby-lsp/pull/2779
   repo: ruby-lsp
-  status: open
+  status: merged
   date: 2024-10-25
