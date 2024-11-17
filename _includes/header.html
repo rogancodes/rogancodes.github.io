@@ -1,19 +1,28 @@
 <header class="text-xl italic font-bold text-slate-600">
-	<div class="max-w-5xl mx-auto h-16 flex justify-between md:space-x-8">
-    <a rel="noopener noreferrer" href="/" class="flex items-center px-4 text-3xl"> rogancodes</a>
-		<ul class="items-stretch hidden space-x-3 md:flex">
+  <div class="max-w-5xl mx-auto h-16 flex justify-between md:space-x-8">
+    <a rel="noopener noreferrer" href="/" class="flex items-center px-4 text-3xl"> rogan.codes</a>
+    <ul class="items-stretch hidden space-x-3 md:flex">
       {% for item in site.data.navigation %}
-        <li class="flex">
-            <a rel="noopener noreferrer" href="{{ item.link }}" class="flex items-center px-3 {% if page.url == item.link %} text-violet-600 underline decoration-solid {% endif %}">
-            {{ item.name }}
-          </a>
-        </li>
+      <li class="flex">
+        <a rel="noopener noreferrer" href="{{ item.link }}" class="flex items-center px-3 {% if page.url == item.link %} text-violet-600 underline decoration-solid {% endif %}">
+          {{ item.name }}
+        </a>
+      </li>
       {% endfor %}
-		</ul>
-		<button title="Button" type="button" class="p-4 md:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-800">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-			</svg>
-		</button>
-	</div>
+    </ul>
+    <div x-data="{ isOpen: false }" class="relative md:hidden inline-block">
+      <!-- Dropdown toggle button -->
+      <button @click="isOpen = !isOpen" class="relative z-10 block p-5">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-800">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div x-show="isOpen" @click.away="isOpen = false" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="absolute right-0 z-20 w-36 py-2 mt-2 origin-top-right rounded-md shadow-xl bg-white">
+        {% for item in site.data.navigation %}
+          <a href="{{ item.link }}" class="block px-4 py-3 text-sm hover:bg-gray-200">{{ item.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </header>
