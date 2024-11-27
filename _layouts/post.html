@@ -2,8 +2,10 @@
 layout: default
 ---
 <div class="prose max-w-none px-10 prose-invert">
-  <p class="text-4xl underline">
-    {{ page.title}}
-  </p>
+  <h1 class="text-blue-300 underline decoration-2">
+    {% if page.title != 'About' %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
   {{ content }}
 </div>
