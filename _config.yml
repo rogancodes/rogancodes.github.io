@@ -2,7 +2,4 @@ url: "https://rogancodes.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Rogan Codes" # the name of your site, e.g. ACME Corp.
 
-kramdown:
-  syntax_highlighter: coderay
-  syntax_highlighter_opts:
-    line_numbers: false
+markdown: kramdown

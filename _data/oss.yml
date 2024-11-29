@@ -18,3 +18,8 @@
   repo: ruby-lsp
   status: merged
   date: 2024-10-25
+- title: Add Prepare Rename Request
+  pr: https://github.com/Shopify/ruby-lsp/pull/2894
+  repo: ruby-lsp
+  status: merged
+  date: 2024-11-21
