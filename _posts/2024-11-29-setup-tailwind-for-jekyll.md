@@ -86,3 +86,36 @@ jekyll serve --watch
 # compiles the tailwind.css file into main.css and watches for changes
 npm run build:css
 {% endhighlight %}
+
+### 9. (Optional) Setup Tailwind CSS Typography plugin
+
+Tailwind Typography plugin is useful if you plan to write your posts in Markdown format.
+
+{% highlight bash %}
+# Install the tailwind typography plugin
+yarn add @tailwindcss/typography
+{% endhighlight %}
+
+{% highlight javascript %}
+// Then add the plugin to your tailwind.config.js file:
+
+module.exports = {
+  theme: {
+    // ...
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
+}
+{% endhighlight %}
+
+Add the following HTML content inside the layout you are using for posts.
+
+{% highlight html %}
+<div class="prose">
+  {% raw %} {{ content }} {% endraw %}
+</div>
+{% endhighlight %}
+
+For more details on typography, [Tailwind Typography repository](https://github.com/tailwindlabs/tailwindcss-typography).

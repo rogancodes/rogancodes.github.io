@@ -23,3 +23,8 @@
   repo: ruby-lsp
   status: merged
   date: 2024-11-21
+- title: Support Hover, Completion, Go to definition for Class Variables
+  pr: https://github.com/Shopify/ruby-lsp/pull/2944
+  repo: ruby-lsp
+  status: open
+  date: 2024-12-11
