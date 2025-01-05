@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup Tailwind CSS for Jekyll"
+title:  "How to Set Up Tailwind CSS in Jekyll"
 tags: Tailwind Jekyll
 ---
 
