@@ -30,14 +30,8 @@ car = Vehicle.new "car"
 car.singleton_class
 # =>  #<Class:#<Vehicle:0x00007f084ad77ce8>>
 
-car.singleton_class.singleton_class?
-# => true
-
 Vehicle.singleton_class
 # => #<Class:Vehicle>
-
-Vehicle.singleton_class.singleton_class?
-# => true
 
 {% endhighlight %}
 
